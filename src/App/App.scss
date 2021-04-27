@@ -15,16 +15,18 @@
   h2 {
     font-size: 2rem;
     position: relative;
+    z-index: 1;
   }
 
   h2::after {
     content: "";
     display: flex;
     position: absolute;
-    width: 12rem;
-    height: 0.5rem;
-    transform: translateY(-0.75rem);
-    z-index: -999;
+    width: 15rem;
+    height: 0.3rem;
+    transform: translateY(-0.6rem);
+    opacity: 0.7;
+    z-index: -1;
     background-color: yellow;
   }
   .btn-container {
@@ -49,8 +51,6 @@ h3:last-child {
   color: gray;
   text-align: center;
 }
-
-
 
 h1,
 h2,
