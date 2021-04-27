@@ -1,4 +1,5 @@
 import React from "react";
+import {FiTrash, FiTrash2} from "react-icons/fi";
 
 import {Item} from "../../types";
 import "./styles.scss";
@@ -14,7 +15,7 @@ const List: React.FC<Props> = ({items, deleteItem}) => {
           <li key={i.uid}>
             <span>{i.description}</span>
             <button tabIndex={index + 2} onClick={() => deleteItem(i.uid)}>
-              delete
+              <FiTrash2 size={24} />
             </button>
           </li>
         ))}
