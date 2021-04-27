@@ -33,7 +33,7 @@ const App: React.FC = () => {
       <ToggleTheme />
       <header>
         <h1>Hi! {icon}</h1>
-        <h2>Supermarket list</h2>
+        <h2 className="title">Supermarket list</h2>
       </header>
 
       <h3>{status === "loading" ? "Loading..." : <span>{items.length} items</span>}</h3>
