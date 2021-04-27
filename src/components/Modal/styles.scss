@@ -10,8 +10,11 @@
   justify-content: center;
   main {
     background: var(--background);
-    max-width: 480px;
+    max-width: 100%;
     margin: 0 auto;
+    @media (max-width:480px){
+      width: 100%;
+    }
     padding: 64px;
     display: flex;
     flex-direction: column;
