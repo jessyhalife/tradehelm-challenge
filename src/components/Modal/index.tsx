@@ -40,9 +40,10 @@ const Modal: React.FC<Props> = ({saveHandler, show, handleClose}) => {
         <button className="close" onClick={close}>
           Close X
         </button>
-        <h2>Add new item</h2>
+        <h2 className="mb-lg">Add new item</h2>
         <input
           ref={inputRef}
+          className="mb-lg"
           placeholder="description"
           type="text"
           value={input}

@@ -32,11 +32,13 @@ const App: React.FC = () => {
       </div>
       <ToggleTheme />
       <header>
-        <h1>Hi! {icon}</h1>
-        <h2 className="title">Supermarket list</h2>
+        <h1 className="mb-md">Hi! {icon}</h1>
+        <h2 className="title mb-md">Supermarket list</h2>
       </header>
 
-      <h3>{status === "loading" ? "Loading..." : <span>{items.length} items</span>}</h3>
+      <h3 className="mb-lg">
+        {status === "loading" ? "Loading..." : <span>{items.length} items</span>}
+      </h3>
       {items.length > 0 ? (
         <List deleteItem={deleteItem} items={items} />
       ) : (

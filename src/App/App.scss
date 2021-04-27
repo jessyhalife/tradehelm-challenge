@@ -2,12 +2,12 @@
   width: 100%;
   max-width: 480px;
   margin: auto;
-  padding: 0 24px;
+  padding: 16px 24px;
   background: var(--background);
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+
   h1 {
     font-size: 4rem;
   }
