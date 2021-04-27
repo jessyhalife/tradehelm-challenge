@@ -3,7 +3,14 @@ import {v4 as uuidv4} from "uuid";
 
 import {Item} from "../types";
 
-function useLocalStorage() {
+interface hook {
+  status: "loading" | "done";
+  items: Item[];
+  saveItem: (description: Item["description"]) => void;
+  deleteItem: (uid: Item["uid"]) => void;
+}
+
+function useLocalStorage(): hook {
   const [items, setItems] = React.useState<Item[]>([]);
   const [status, setStatus] = React.useState<"loading" | "done">("loading");
   const [initial, setInitial] = React.useState<boolean>(true);
