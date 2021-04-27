@@ -1,5 +1,5 @@
 import React from "react";
-import {FiTrash, FiTrash2} from "react-icons/fi";
+import {FiTrash2} from "react-icons/fi";
 
 import {Item} from "../../types";
 import "./styles.scss";
