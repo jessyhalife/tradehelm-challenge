@@ -1,0 +1,27 @@
+ul {
+    list-style: none;
+    li {
+        color: var(--color);
+        padding: 16px 16px;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #cacaca;
+        margin-bottom: 8px;
+        border-radius: 8px;
+        box-shadow: 2px 1px 0px 0px rgba(0,0,0,.05);
+        justify-content: space-between;
+        span {
+            font-weight: 500;
+        }
+        button {
+            padding: 2px 4px;
+            background-color: rgb(235, 90, 90);
+            border: none;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+}
