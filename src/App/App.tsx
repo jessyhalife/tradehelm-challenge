@@ -26,19 +26,25 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className={`container`}>
-      <div className="toggle-wrapper">
-        <div className="toggle" />
-      </div>
+    <div className="container">
       <ToggleTheme />
+
       <header>
         <h1 className="mb-md">Hi! {icon}</h1>
         <h2 className="title mb-md">Supermarket list</h2>
       </header>
 
       <h3 className="mb-lg">
-        {status === "loading" ? "Loading..." : <span>{items.length} items</span>}
+        {status === "loading" ? (
+          "Loading..."
+        ) : (
+          <div className="info_clear_wrapper">
+            <span>{items.length} items</span>
+            <a onClick={() => alert("hi")}>Clear list</a>
+          </div>
+        )}
       </h3>
+
       {items.length > 0 ? (
         <List deleteItem={deleteItem} items={items} />
       ) : (

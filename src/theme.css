@@ -35,3 +35,11 @@ html {
 .mb-lg {
   margin-bottom:1.5rem;
 }
+
+.mt-sm {
+  margin-top: 0.5rem;
+}
+
+.mt-md {
+  margin-top: 1rem;
+}
