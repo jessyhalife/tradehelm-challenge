@@ -9,7 +9,7 @@ import "./App.scss";
 
 const icons = ["👋🏻", "👋", "👋🏼", "👋🏽", "👋🏾", "👋🏿"];
 const App: React.FC = () => {
-  const {status, items, saveItem, deleteItem} = useLocalStorage();
+  const {status, items, saveItem, deleteItem, clear} = useLocalStorage();
   const [showModal, setShowModal] = React.useState<boolean>(false);
   const [icon, setIcon] = React.useState("👋🏻");
 
@@ -40,7 +40,7 @@ const App: React.FC = () => {
         ) : (
           <div className="info_clear_wrapper">
             <span>{items.length} items</span>
-            <a onClick={() => alert("hi")}>Clear list</a>
+            <a onClick={clear}>Clear list</a>
           </div>
         )}
       </h3>

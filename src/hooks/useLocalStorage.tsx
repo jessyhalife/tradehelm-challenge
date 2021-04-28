@@ -8,6 +8,7 @@ interface hook {
   items: Item[];
   saveItem: (description: Item["description"]) => void;
   deleteItem: (uid: Item["uid"]) => void;
+  clear: () => void;
 }
 
 function useLocalStorage(): hook {
@@ -43,7 +44,9 @@ function useLocalStorage(): hook {
       setItems((items) => items.filter((x) => x.uid !== uid));
     }
   }
-
+  function clear(): void {
+    setItems([]);
+  }
   function saveItem(description: string): void {
     const uid = uuidv4();
 
@@ -55,7 +58,7 @@ function useLocalStorage(): hook {
     }, 500);
   }
 
-  return {status, items, saveItem, deleteItem};
+  return {status, items, saveItem, deleteItem, clear};
 }
 
 export default useLocalStorage;
